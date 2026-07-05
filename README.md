@@ -9,6 +9,7 @@ Don't want to run the relay, just want to connect to some? Here are some availab
 - [wss://nostrelites.org](https://nostrelites.org)
 - [wss://wot.nostr.party](https://wot.nostr.party)
 - [wss://wot.girino.org](https://wot.girino.org)
+- [wss://relay.lexingtonbitcoin.org](https://relay.lexingtonbitcoin.org)
 - [wss://wot.azzamo.net](https://wot.azzamo.net)
 - [wss://satsage.xyz](https://satsage.xyz)
 - [wss://wot.shaving.kiwi](https://wot.shaving.kiwi)
