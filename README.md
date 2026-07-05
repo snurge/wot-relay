@@ -9,7 +9,6 @@ Don't want to run the relay, just want to connect to some? Here are some availab
 - [wss://nostrelites.org](https://nostrelites.org)
 - [wss://wot.nostr.party](https://wot.nostr.party)
 - [wss://wot.girino.org](https://wot.girino.org)
-- [wss://relay.lexingtonbitcoin.org](https://relay.lexingtonbitcoin.org)
 - [wss://wot.azzamo.net](https://wot.azzamo.net)
 - [wss://satsage.xyz](https://satsage.xyz)
 - [wss://wot.shaving.kiwi](https://wot.shaving.kiwi)
@@ -174,6 +173,33 @@ Follow the instructions to generate the certificate.
 ### 8. Access the relay
 
 Once everything is set up, the relay will be running on `localhost:3334` or your domain name if you set up nginx.
+
+## Optional WoT Relay Manager
+
+Relay operators who want a lightweight local dashboard can use the optional
+[WoT Relay Manager](https://github.com/snurge/wot-relay-manager).
+
+The manager is intended as an operator convenience tool and is not required to
+run `wot-relay`. It provides a web UI for relay stats, configuration
+visibility/editing, recent logs, and controlled service restart.
+
+For security, the manager is designed to bind to `127.0.0.1` and be accessed
+over an SSH tunnel. It should not expose an admin interface publicly.
+
+Example SSH tunnel:
+
+```bash
+ssh -N -o ServerAliveInterval=60 -L 4781:127.0.0.1:4781 root@YOUR_RELAY_HOST
+```
+
+Then open the manager locally:
+
+```bash
+http://127.0.0.1:4781
+```
+
+This is intended as an operator convenience tool, not a change to core relay
+behaviour.
 
 ## Start the Project with Docker Compose
 
